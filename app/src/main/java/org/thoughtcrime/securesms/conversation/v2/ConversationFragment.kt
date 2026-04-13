@@ -2262,8 +2262,8 @@ class ConversationFragment :
   private fun initializeMediaKeyboard() {
     val keyboardMode: TextSecurePreferences.MediaKeyboardMode = TextSecurePreferences.getMediaKeyboardMode(requireContext())
 
+    inputPanel.showMediaKeyboardToggle(false)
     keyboardPagerViewModel.resetPages()
-    inputPanel.showMediaKeyboardToggle(true)
 
     val keyboardPage = when (keyboardMode) {
       TextSecurePreferences.MediaKeyboardMode.EMOJI -> KeyboardPage.EMOJI
